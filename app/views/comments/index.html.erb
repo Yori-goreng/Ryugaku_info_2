@@ -1,5 +1,25 @@
 <h1>ログイン画面</h1>
+<!-- ログイン画面とトークルーム画面のviewを分ける必要あり -->
 
+
+<% if user_signed_in? %>
+  <h2>トークルーム作成</h2>
+  <%= form_with model: @room do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
+
+  <h2>参加済トークルーム一覧</h2>
+    <%= @rooms.each do |room| %>
+      <%= room.name %>
+    <% end %>
+
+  <h2>未参加トークルーム一覧</h2>
+    <% @nonrooms.each do |room| %>
+      <%= room.name %>
+    <% end %>
+  <% end %>
 
 <% if user_signed_in? %>
   <h2>名前:<%= current_user.name %></h2>
