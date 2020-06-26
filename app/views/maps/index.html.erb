@@ -1,4 +1,10 @@
 <h2>gmap</h2>
+<!-- form_withはデフォルトでremote: trueの挙動になる -->
+<%= form_with url: map_request_path, method: :get do |f| %>
+  <%= f.text_field :address %>
+  <%= f.submit '地図表示' %>
+<% end %>
+
 <div id='map'></div>
 
 <style>
