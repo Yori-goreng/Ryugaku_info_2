@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+
+  resources :users
   
   root 'comments#index'
   get 'comments/index'
