@@ -12,11 +12,10 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     # 値を受け取った時
 
   speak: (message) ->
-    @perform 'speak', message: message　#サーバーサイドのspeakアクションにmessageパラメータを渡す
+    @perform 'speak', message: message #サーバーサイドのspeakアクションにmessageパラメータを渡す
 
 jQuery(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
   if event.keyCode is 13 # return キーのキーコードが13
-    App.room.speak event.target.value # speak メソッド, event.target.valueを引数に.
+    App.room.speak [event.target.value, $('[data-user]').attr('data-user'), $('[data-room]').attr('data-room')] # speak メソッド, event.target.valueを引数に.
     event.target.value = ''
-    alert()
     event.preventDefault()
