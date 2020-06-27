@@ -8,11 +8,12 @@
       <ul class="navbar-nav ml-md-auto align-items-center">
 
         <% if user_signed_in? %>
-          <h2>名前:<%= current_user.name %></h2>
-          <h4>メールアドレス: <%= current_user.email %> </h4>
+        <h5>ログイン中です</h5>
+          <h5>名前:<%= current_user.name %></h5>
+          <h5>メールアドレス: <%= current_user.email %> </h5>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <% else %>
-          <h2>現在ログインしていません</h2>
+          <h5>ログインしていません</h5>
           <%= link_to "ログイン", new_user_session_path, class: 'post' %>
           <%= link_to "新規登録", new_user_registration_path, class: 'post' %> 
           <%= link_to 'ゲストログイン(閲覧用)', users_guest_sign_in_path, method: :post %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/top'
   resources :rooms, only: [:show, :create]
     devise_for :users, controllers: {
     sessions: 'users/sessions',
