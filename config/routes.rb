@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  get 'home/top'
   resources :rooms, only: [:show, :create]
     devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
   
-  root 'comments#index'
+  root 'home#top'
   get 'comments/index'
 
   resources :maps, only: [:index, :show]
