@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
-    @posts = @room.post
+    @posts = @room.posts  
   end
 
   def create
