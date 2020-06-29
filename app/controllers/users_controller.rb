@@ -24,6 +24,16 @@ class UsersController < ApplicationController
     @user = User.order(id: :asc)
   end
 
+  def update
+    @user = User.find(params[:id])
+    #if @user.update_attributes(user_params)
+    # flash[:success] = "Profile updated"
+    #redirect_to @user
+    #else
+    # render 'edit'
+    #end
+  end
+
   def destroy
     user = User.find(parmas[:id])
     user.destroy!
@@ -31,7 +41,8 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_params
-    params.require(:user).permit(:name, :email, :password)
-  end
+    def user_params
+      params.require(:user).permit(:name, :email, :password,
+                                   :password_confirmation)
+    end
 end
