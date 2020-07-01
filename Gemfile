@@ -67,4 +67,6 @@ gem 'geocoder'
 
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
+gem 'gravtastic'
+gem 'pry-rails'
 gem 'devise'
