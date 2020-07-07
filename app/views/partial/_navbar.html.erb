@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-md-auto align-items-center">
         <li>
+          <%= link_to "地図", maps_path %>
+        </li>
+        <li>
+          <%= link_to "学校一覧", books_path %>
+        </li>
+        <li>
           <%= link_to "マイページ", user_path(current_user) %>
         </li>
         <li>
-          <%= link_to "学校一覧", "#" %>
-        </li>
-        <li>
-          <%= link_to "チャット", "#" %>
-        </li>
-        <li>
-          <%= link_to "地図", maps_path %>
+          <%= link_to "ユーザーランキング", "#" %>
         </li>
         <li>
           <%= link_to "", "#", class: "nav-link commonNavIcon profile-icon" %>
