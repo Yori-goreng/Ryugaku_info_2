@@ -1,5 +1,5 @@
 <%= form_tag(books_path, :method => "get") do %>
-  <%= text_thing_tag :search %>
+  <%= text_field_tag :search %>
 <%= submit_tag "Search", :schoolname => nil ,class: "button is-info" %>
   <% end %>
 
@@ -34,3 +34,5 @@
 <br>
 
 <%= link_to 'New Book', new_book_path %>
+
+<% end %>
