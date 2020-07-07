@@ -4,7 +4,8 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :memo
       t.string :schoolname
-
+      t.string :content
+      
       t.timestamps
     end
   end
