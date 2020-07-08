@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
   resources :books
+  get '/books/search', to: 'books#search'
+
     devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
-
   resources :users
-  get '/books/search' to: 'books#search'
   
   root 'comments#index'
   get 'comments/index'
 
   resources :maps, only: [:index, :show]
-
   #Mapsコントローラ, mapアクションに対応したルーティングを設定
   get '/map_request', to: 'maps#map', as: 'map_request'
 

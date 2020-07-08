@@ -1,0 +1,23 @@
+<%= form_tag('books/search', method: :get) do %>
+    <%= label_tag :名前 %>
+  <%= text_field_tag :search_title %>
+  <%= label_tag :年齢 %>
+  <%= text_field_tag :search_memo %>
+  <%= submit_tag '検索' %>
+<% end %>
+<table>
+  <tbody>
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>メモ</th>
+      </tr>
+    </thead>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.memo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

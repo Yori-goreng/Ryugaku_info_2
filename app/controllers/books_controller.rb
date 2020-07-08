@@ -5,6 +5,8 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.page(params[:page]).per(20)
+    book_search = BookSearch.new(params_book_search)
+    @books = book_search.execute
   end
 
   # GET /books/1
@@ -79,4 +81,5 @@ class BooksController < ApplicationController
 
     def params_book_search
       params.permit(:search_title, :search_memo)
+    end
 end
