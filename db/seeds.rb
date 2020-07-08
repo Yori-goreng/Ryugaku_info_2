@@ -1,6 +1,7 @@
-Book.create(:title => 'フィリピン', :schoolname => 'フィリピン学校1')
-Book.create(:title => 'フィリピン', :schoolname => 'フィリピン学校2')
-Book.create(:title => 'フィリピン', :schoolname => 'フィリピン学校3')
-
-5.times do |no|
-  Book.create(:schoolname => 'タイトル #{no}')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校1')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校2')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校3')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校4')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校5')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校6')
+Bookd.create(title: 'フィリピン学校' ,name: 'フィリピン学校7')

@@ -74,3 +74,5 @@ gem 'jquery-rails'
 gem 'gravtastic'
 gem 'pry-rails'
 gem 'devise'
+
+gem 'ransack'
