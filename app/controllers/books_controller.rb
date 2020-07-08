@@ -61,6 +61,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def search
+    book_search = BookSearch.new(params_book_search)
+    @books = book_search.execute
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book
@@ -71,4 +76,7 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :memo)
     end
+
+    def params_book_search
+      params.permit(:search_title, :search_memo)
 end
