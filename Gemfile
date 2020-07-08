@@ -68,6 +68,9 @@ gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'bootstrap', '~> 4.5.0'
 
+gem 'slim-rails'
+gem 'html2slim'
+
 gem 'jquery-rails'
 gem 'gravtastic'
 gem 'pry-rails'
