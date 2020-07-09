@@ -69,6 +69,6 @@ class ListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def list_params
-      params.require(:list).permit(:body, :title)
+      params.require(:list).permit(:body, :title, search_ids: [])
     end
 end

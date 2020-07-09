@@ -21,6 +21,18 @@
     <%= form.text_field :title %>
   </div>
 
+    <div class="check_box">
+    <span>タグ</span>
+    <%= form.collection_check_boxes(:search_ids, Search.all, :id, :name) do |search| %>
+     <div>
+       <%= search.label do %>
+         <%= search.check_box %>
+         <%= search.text %>
+       <% end %>
+     </div>
+   <% end %>
+ </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
