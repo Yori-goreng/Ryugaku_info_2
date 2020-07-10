@@ -2,6 +2,8 @@
 
 <h1>Lists</h1>
 
+<%= form_tag list_path, method: :>
+
 <table>
   <thead>
     <tr>
@@ -27,3 +29,8 @@
 <br>
 
 <%= link_to 'New List', new_list_path %>
+
+<%= list.searchs.each do |search| %>
+  <%= search.name %>
+<% end %>
+
