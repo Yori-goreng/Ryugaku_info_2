@@ -5,6 +5,7 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @lists = List.all
+    @lists = params[:tag_id].present? ? Search.find[params[:tag_id]].lists : List.all
   end
 
   # GET /lists/1
