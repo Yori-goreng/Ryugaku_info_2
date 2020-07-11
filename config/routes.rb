@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'notes/index'
   resources :books
     devise_for :users, controllers: {
     registrations: 'users/registrations'
@@ -8,6 +9,10 @@ Rails.application.routes.draw do
   
   root 'comments#index'
   get 'comments/index'
+
+  resources :likes
+
+  resources :notes
 
   resources :maps, only: [:index, :show]
 
