@@ -55,3 +55,5 @@ ActiveRecord::Schema.define(version: 2020_07_06_080617) do
   end
 
 end
+
+test
