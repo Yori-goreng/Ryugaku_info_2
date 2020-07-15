@@ -64,6 +64,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Googlemapで経度緯度情報を取得
 gem 'geocoder'
 
+gem "rspec", ">= 3.0.0"
+
 
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
